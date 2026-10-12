@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="sky" aria-hidden="true">
+    <div class="cloud c1"></div>
+    <div class="cloud c2"></div>
+    <div class="cloud c3"></div>
+    <div class="cloud c4"></div>
+    <div class="cloud c5"></div>
+  </div>
+
+  <main class="app">
+    <h1>Weather Dashboard</h1>
+
+    <form id="search-form" class="search" novalidate>
+      <label for="city-input" class="sr-only">City name</label>
+      <input id="city-input" type="text" placeholder="Search for a city…" autocomplete="off" />
+      <button type="submit" id="search-btn">Search</button>
+    </form>
+
+    <div id="loading" class="status loading" role="status" hidden>
+      <span class="spinner" aria-hidden="true"></span> Loading weather…
+    </div>
+    <div id="error" class="status error" role="alert" hidden></div>
+
+    <section id="weather" class="card" hidden>
+      <h2 id="place"></h2>
+      <p id="updated" class="muted"></p>
+      <div class="current">
+        <span id="icon" class="icon" aria-hidden="true"></span>
+        <div>
+          <p id="temp" class="temp"></p>
+          <p id="conditions" class="conditions"></p>
+        </div>
+      </div>
+      <dl class="details" id="details"></dl>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
